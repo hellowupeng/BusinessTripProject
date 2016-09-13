@@ -10,19 +10,19 @@ import {
 import styles from './styles';
 
 /**
- * 出差类型
+ * 开始日期
  */
 
-export default class BusinessType extends Component {
+export default class StartDate extends Component {
   render() {
     return (
-      <View style={[styles.rowContainer, { marginTop: 54 }]}>
-        <Text style={styles.title}>出差类型</Text>
+      <View style={[styles.rowContainer, styles.line]}>
+        <Text style={styles.title}>开始日期</Text>
         <TouchableOpacity style={styles.type}>
-          <Text>L01 出差</Text>
+          <Text>2016-5-24</Text>
           <Image
             style={styles.image}
-            source={require('../../images/forward.png')}
+            source={require('../../../images/forward.png')}
           />
         </TouchableOpacity>
       </View>

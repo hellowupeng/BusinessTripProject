@@ -10,16 +10,16 @@ import {
 import styles from './styles';
 
 /**
- * 出差类型
+ * 时长
  */
 
-export default class BusinessType extends Component {
+export default class Duration extends Component {
   render() {
     return (
-      <View style={[styles.rowContainer, { marginTop: 54 }]}>
-        <Text style={styles.title}>出差类型</Text>
+      <View style={styles.rowContainer}>
+        <Text style={styles.title}>时长</Text>
         <TouchableOpacity style={styles.type}>
-          <Text>L01 出差</Text>
+          <Text>0.0工时</Text>
           <Image
             style={styles.image}
             source={require('../../images/forward.png')}

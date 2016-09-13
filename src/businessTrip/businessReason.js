@@ -11,18 +11,18 @@ import {
 import styles from './styles';
 
 /**
- * 拜访客户（目的地）
+ * 出差原因
  */
 
-export default class Destination extends Component {
+export default class BusinessReason extends Component {
   render() {
     return (
       <View style={styles.rowContainer}>
-        <Text style={styles.title}>拜访客户</Text>
+        <Text style={styles.title}>出差原因</Text>
         <View style={styles.inputContainer}>
           <TextInput
-            style={styles.destinationTextInput}
-            placeholder="客户名称"
+            style={styles.reasonTextInput}
+            placeholder="点击填写（必填）"
           />
         </View>
       </View>

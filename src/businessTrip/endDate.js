@@ -10,16 +10,16 @@ import {
 import styles from './styles';
 
 /**
- * 出差类型
+ * 结束时间
  */
 
-export default class BusinessType extends Component {
+export default class EndDate extends Component {
   render() {
     return (
-      <View style={[styles.rowContainer, { marginTop: 54 }]}>
-        <Text style={styles.title}>出差类型</Text>
+      <View style={[styles.rowContainer, { marginTop: 0, borderTopWidth: 1, borderColor: 'whitesmoke'}]}>
+        <Text style={styles.title}>结束时间</Text>
         <TouchableOpacity style={styles.type}>
-          <Text>L01 出差</Text>
+          <Text>请选择（必填）</Text>
           <Image
             style={styles.image}
             source={require('../../images/forward.png')}

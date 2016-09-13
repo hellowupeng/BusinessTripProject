@@ -36,7 +36,7 @@ class BusinessTripProject extends Component {
                 Title: (route, navigator, index, navState) =>
                   { return (<Text>出差申请</Text>); },
               }}
-              style={{ backgroundColor: '#ccc', height: 44, }}
+              style={{ backgroundColor: 'gainsboro', height: 44, }}
             />
           }
           style={{ marginTop: 20 }}
