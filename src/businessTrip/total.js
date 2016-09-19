@@ -16,7 +16,7 @@ export default class Total extends Component {
       <View style={styles.totalRow}>
         <Text style={styles.title}>金额汇总</Text>
         <View style={styles.type}>
-          <Text>0.00</Text>
+          <Text style={styles.value}>0.00</Text>
           <Text style={styles.currency}>RMB</Text>
         </View>
       </View>

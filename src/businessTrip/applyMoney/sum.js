@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   Text,
+  TextInput,
   View,
 } from 'react-native';
 
@@ -16,7 +17,11 @@ export default class Sum extends Component {
       <View style={[styles.rowContainer, styles.line]}>
         <Text style={styles.title}>申请金额</Text>
         <View style={styles.type}>
-          <Text>0.00</Text>
+          <TextInput
+            style={styles.reasonTextInput}
+            placeholder="0.00"
+            placeholderTextColor="#999999"
+          />
           <Text style={styles.currency}>RMB</Text>
         </View>
       </View>

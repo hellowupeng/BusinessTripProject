@@ -13,33 +13,44 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   background: {
-    backgroundColor: 'whitesmoke',
+    backgroundColor: '#f0eff5',
   },
   color: {
-    color: '#1fd662',
+    color: '#1fd762',
   },
   borderTopLine: {
     borderTopWidth: 1,
-    borderColor: 'whitesmoke',
+    borderColor: '#f0eff5',
   },
   rowContainer: {
-    marginTop: 10,
-    height: 44,
+    marginTop: 11,
+    height: 48,
     width: width,
     flexDirection: 'row',
     backgroundColor: 'white',
     alignItems: 'center',
   },
-  title: { // 行标题
+
+  // 行标题
+  title: {
     flex: 1,
-    marginLeft: 20,
+    marginLeft: 18,
+    fontSize: 16,
+    color: '#333333',
   },
   type: {
     flex: 1,
-    paddingRight: 20,
+    paddingRight: 11,
     justifyContent: 'flex-end',
     flexDirection: 'row',
     alignItems: 'center',
+  },
+
+  // 行右边取值
+  value: {
+    fontSize: 14,
+    color: '#999999',
+    marginRight: 5,
   },
   image: {
     width: 20,
@@ -50,20 +61,28 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     flexDirection: 'row',
     alignItems: 'center',
+    marginRight: 18,
   },
-  reasonTextInput: { // 出差原因TextInput
-    height: 40,
-    width: 130,
-    fontSize: 14,
-  },
-  // destination
 
-  destinationTextInput: { // 拜访客户TextInput
+  // 出差原因TextInput
+  reasonTextInput: {
     height: 40,
-    width: 80,
+    width: 115,
     fontSize: 14,
+    color: '#999999',
   },
-  addButtonContainer: { // 添加备用金申请
+
+  // destination
+  // 拜访客户TextInput
+  destinationTextInput: { 
+    height: 40,
+    width: 115,
+    fontSize: 14,
+    color: '#999999',
+  },
+
+  // 添加备用金申请
+  addButtonContainer: { 
     width: width,
     height: 44,
     backgroundColor: 'white',
@@ -76,43 +95,48 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  submitContainer: { // 提交按钮
+
+  // 提交按钮
+  submitContainer: { 
     width: width,
-    height: 50,
+    height: 60,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  
   submitButton: {
     backgroundColor: '#1fd662',
-    width: 200,
-    height: 40,
+    width: 244,
+    height: 44,
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
+    color: '#ffffff',
     backgroundColor: 'transparent',
+    fontSize: 17,
   },
-  // Total
 
+  // Total
   totalRow: {
-    height: 44,
+    height: 48,
     width: width,
     flexDirection: 'row',
     backgroundColor: 'white',
     alignItems: 'center',
   },
   currency: {
-    color: '#1fd662',
+    color: '#1fd762',
     marginHorizontal: 5,
   },
-  // TravelDetails
 
+  // TravelDetails
   travelRow: {
-    marginTop: 10,
-    paddingTop: 5,
+    marginTop: 11,
+    paddingTop: 8,
+    paddingHorizontal: 18,
     height: 100,
     width: width,
     backgroundColor: 'white',
@@ -120,11 +144,10 @@ const styles = StyleSheet.create({
   travelTextInput: {
     height: 100,
     width: width,
-    paddingHorizontal: 20,
     fontSize: 14,
   },
-  // AddPhotos
 
+  // AddPhotos
   addPhotosRow: {
     width: width,
     height: 60,
@@ -133,7 +156,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   addPhotosImg: {
-    marginHorizontal: 20,
+    marginHorizontal: 18,
+    width: 45,
+    height: 45,
+  },
+  addPicturesText: {
+    fontSize: 14,
+    color: '#cccccc',
   },
 });
 

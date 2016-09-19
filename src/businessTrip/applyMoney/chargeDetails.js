@@ -11,6 +11,14 @@ import styles from './styles';
  */
 
 export default class chargeDetails extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
     return (
       <View style={[styles.chargeDetails, styles.line]}>
@@ -18,6 +26,9 @@ export default class chargeDetails extends Component {
           style={styles.chargeDetailsTextInput}
           placeholder="请输入详细描述"
           multiline={true}
+          value={this.state.value}
+          onChange={(event) => this.setState({ value: event.nativeEvent.text }) }
+          onSubmitEditing={(event) => this.setState({ value: event.nativeEvent.text }) }
         />
       </View>
     );

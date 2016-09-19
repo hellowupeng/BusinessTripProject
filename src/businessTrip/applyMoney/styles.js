@@ -14,60 +14,86 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flex: 1,
-    height: 44,
+    height: 48,
     width: width,
     flexDirection: 'row',
     backgroundColor: 'white',
     alignItems: 'center',
   },
-  title: { // 行标题
+
+  // 行标题
+  title: { 
     flex: 1,
-    marginLeft: 20,
+    marginLeft: 18,
+    fontSize: 16,
+    color: '#333333',
   },
+
   type: {
     flex: 1,
-    paddingRight: 20,
+    paddingRight: 11,
     justifyContent: 'flex-end',
     flexDirection: 'row',
     alignItems: 'center',
   },
+
+  // 行右边取值
+  value: {
+    fontSize: 14,
+    color: '#999999',
+    marginRight: 5,
+  },
+
   image: {
     width: 20,
     height: 20,
   },
-  // Bar
 
+  // Bar
   bar: {
     width: width,
     height: 30,
-    // backgroundColor: 'gainsboro',
-    backgroundColor: 'green',
+    backgroundColor: '#f0eff5',
     justifyContent: 'center',
-    padding: 20,
+    paddingLeft: 18,
   },
-  // chargeDetails
+  barText: {
+    fontSize: 14,
+    color: '#999999',
+  },
 
+  // chargeDetails
   chargeDetails: {
     width: width,
     height: 100,
     backgroundColor: 'white',
   },
+
   chargeDetailsTextInput: {
     width:width,
     height: 100,
-    margin: 20,
     fontSize: 14,
+    paddingTop: 8,
+    paddingHorizontal: 18,
   },
   line: {
     borderTopWidth: 1,
-    borderColor: 'whitesmoke',
+    borderColor: '#f0eff5',
   },
-  // Sum
 
+  // Sum
   currency: {
-    color: '#1fd662',
+    color: '#1fd762',
     marginHorizontal: 5,
-  }
+  },
+
+  // 申请金额textInput
+  reasonTextInput: {
+    height: 40,
+    width: 50,
+    fontSize: 14,
+    color: '#999999',
+  },
 });
 
 module.exports = styles;

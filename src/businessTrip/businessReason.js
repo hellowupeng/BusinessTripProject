@@ -23,6 +23,7 @@ export default class BusinessReason extends Component {
           <TextInput
             style={styles.reasonTextInput}
             placeholder="点击填写（必填）"
+            placeholderTextColor="#999999"
           />
         </View>
       </View>

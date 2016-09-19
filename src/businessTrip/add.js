@@ -16,7 +16,10 @@ export default class AddButton extends Component {
   render() {
     return (
       <View style={styles.addButtonContainer}>
-        <TouchableOpacity style={styles.addButton}>
+        <TouchableOpacity
+          style={styles.addButton}
+          onPress={() => this.props.addApplyForms()}
+        >
           <Image
             source={require('../../images/add.png')}
             style={styles.image}

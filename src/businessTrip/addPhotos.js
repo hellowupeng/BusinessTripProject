@@ -18,11 +18,11 @@ export default class AddPhotos extends Component {
       <View style={styles.addPhotosRow}>
         <TouchableOpacity>
           <Image
-            source={require('../../images/add.png')}
-            style={[styles.image, styles.addPhotosImg]}
+            source={require('../../images/list_add_pic.png')}
+            style={styles.addPhotosImg}
           />
         </TouchableOpacity>
-        <Text style={[styles.color, { marginLeft: 5 }]}>添加照片</Text>
+        <Text style={styles.addPicturesText}>添加照片</Text>
       </View>
     );
   }
