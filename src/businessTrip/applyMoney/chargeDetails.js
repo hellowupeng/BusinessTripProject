@@ -10,7 +10,8 @@ import styles from './styles';
  * 费用明细
  */
 
-export default class chargeDetails extends Component {
+export default class ChargeDetails extends Component {
+  mixins: [React.addons.PureRenderMixin]
 
   constructor(props) {
     super(props);
@@ -27,10 +28,15 @@ export default class chargeDetails extends Component {
           placeholder="请输入详细描述"
           multiline={true}
           value={this.state.value}
-          onChange={(event) => this.setState({ value: event.nativeEvent.text }) }
-          onSubmitEditing={(event) => this.setState({ value: event.nativeEvent.text }) }
+          onChange={(event) => this.onChangeText(event.nativeEvent.text)}
+          onSubmitEditing={(event) => this.onChangeText(event.nativeEvent.text)}
         />
       </View>
     );
+  }
+
+  onChangeText(text) {
+    this.setState({ value: text});
+    this.props.saveApplyFormDetailInfo(text, this.props.rowID);
   }
 }

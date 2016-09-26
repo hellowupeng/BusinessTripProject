@@ -11,6 +11,15 @@ import styles from './styles';
  */
 
 export default class TravelDetails extends Component {
+  mixins: [React.addons.PureRenderMixin]
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+    };
+  }
+  
   render() {
     return (
       <View style={styles.travelRow}>
@@ -18,8 +27,15 @@ export default class TravelDetails extends Component {
           style={styles.travelTextInput}
           placeholder="请输入详细行程..."
           multiline={true}
+          value={this.state.value}
+          onChange={(event) => this.onChangeText(event.nativeEvent.text)}
+          onSubmitEditing={(event) => this.onChangeText(event.nativeEvent.text)}
         />
       </View>
     );
+  }
+
+  onChangeText(text) {
+    this.setState({ value: text});
   }
 }

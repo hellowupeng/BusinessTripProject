@@ -14,11 +14,17 @@ import styles from './styles';
  */
 
 export default class BusinessType extends Component {
+  mixins: [React.addons.PureRenderMixin]
+  
   constructor(props) {
     super(props);
     this.state = {
-      value: '测试',
+      value: '',
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ value: nextProps.businessType });
   }
 
   render() {

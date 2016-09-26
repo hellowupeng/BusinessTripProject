@@ -13,6 +13,12 @@ import styles from './styles';
  */
 
 export default class AddButton extends Component {
+  mixins: [React.addons.PureRenderMixin]
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+  
   render() {
     return (
       <View style={styles.addButtonContainer}>

@@ -17,10 +17,18 @@ import styles from './styles';
  */
 
 export default class ApplyMoney extends Component {
+  mixins: [React.addons.PureRenderMixin]
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View>
-        <Bar rowID={this.props.rowID}/>
+        <Bar
+          deleteOneApplyForm={(rowID) => this.props.deleteOneApplyForm(rowID)}
+          rowID={this.props.rowID}/>
         <Species
           showPicker={(pickerData, selectedValue, type, row) => this.props.showPicker(pickerData, selectedValue, type, row)}
           speciesData={this.props.speciesData}
@@ -29,20 +37,25 @@ export default class ApplyMoney extends Component {
         />
         <StartDate
           showPicker={(pickerData, selectedValue, type, row) => this.props.showPicker(pickerData, selectedValue, type, row)}
-          dateData={this.props.dateData}
           rowData={this.props.rowData}
           rowID={this.props.rowID}
         />
         <EndDate
           showPicker={(pickerData, selectedValue, type, row) => this.props.showPicker(pickerData, selectedValue, type, row)}
-          dateData={this.props.dateData}
           rowData={this.props.rowData}
           rowID={this.props.rowID}
         />
         <ChargeDetails
           rowID={this.props.rowID}
+          saveApplyFormDetailInfo={(detailInfo, rowID) => this.props.saveApplyFormDetailInfo(detailInfo, rowID)}
         />
-        <Sum />
+        <Sum
+          calculateMoney={(money, rowID) => this.props.calculateMoney(money, rowID)}
+          rowID={this.props.rowID}
+          rowData={this.props.rowData}
+          showPicker={(pickerData, selectedValue, type, row) => this.props.showPicker(pickerData, selectedValue, type, row)}
+          pickerData={this.props.pickerData}
+        />
       </View>
     );
   }

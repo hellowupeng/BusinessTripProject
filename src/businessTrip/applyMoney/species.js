@@ -14,14 +14,19 @@ import styles from './styles';
  */
 
 export default class Species extends Component {
+  mixins: [React.addons.PureRenderMixin]
 
   constructor(props) {
     super(props);
     this.state = {
-      value: '测试',
+      value: '',
     };
   }
 
+  componentDidMount() {
+    this.setState({ value: this.props.rowData.species });
+  }
+  
   componentWillReceiveProps(nextProps) {
     this.setState({ value: nextProps.rowData.species });
   }

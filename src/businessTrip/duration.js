@@ -13,12 +13,21 @@ import styles from './styles';
  */
 
 export default class Duration extends Component {
+  mixins: [React.addons.PureRenderMixin]
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '0.0',
+    };
+  }
+  
   render() {
     return (
       <View style={styles.rowContainer}>
         <Text style={styles.title}>时长</Text>
         <View style={styles.type}>
-          <Text style={styles.value}>0.0 工时</Text>
+          <Text style={styles.value}>{`${this.state.value} 工时`}</Text>
         </View>
       </View>
     );

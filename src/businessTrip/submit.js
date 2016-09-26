@@ -12,6 +12,8 @@ import styles from './styles';
  */
 
 export default class Submit extends Component {
+  mixins: [React.addons.PureRenderMixin]
+  
   render() {
     return (
       <View style={styles.submitContainer}>

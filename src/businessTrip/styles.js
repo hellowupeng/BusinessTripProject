@@ -119,14 +119,35 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
 
-  // Total
-  totalRow: {
+  // Total Money
+  totalContainer: {
     height: 48,
     width: width,
+    backgroundColor: 'white',
     flexDirection: 'row',
+  },
+  totalTitleView: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  totalTitle: {
+    marginLeft: 18,
+    fontSize: 16,
+    color: '#333333',
+  },
+  totalListView: {
+    justifyContent: 'center',
+    paddingVertical: 15,
+  },
+  totalRow: {
+    flexDirection: 'row',
+    height: 20,
     backgroundColor: 'white',
     alignItems: 'center',
+    justifyContent: 'flex-end',
+    paddingRight: 11,
   },
+
   currency: {
     color: '#1fd762',
     marginHorizontal: 5,

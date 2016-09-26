@@ -54,12 +54,20 @@ const styles = StyleSheet.create({
     width: width,
     height: 30,
     backgroundColor: '#f0eff5',
-    justifyContent: 'center',
+    alignItems: 'center',
     paddingLeft: 18,
+    flexDirection: 'row',
   },
   barText: {
     fontSize: 14,
     color: '#999999',
+    flex: 1,
+  },
+  deleteButton: {
+    marginRight: 18,
+    color: 'red',
+    fontSize: 14,
+    justifyContent: 'flex-end',
   },
 
   // chargeDetails
@@ -90,9 +98,10 @@ const styles = StyleSheet.create({
   // 申请金额textInput
   reasonTextInput: {
     height: 40,
-    width: 50,
+    width: 55,
     fontSize: 14,
     color: '#999999',
+    // fontWeight: 'bold',
   },
 });
 
